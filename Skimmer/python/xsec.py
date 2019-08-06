@@ -34,10 +34,15 @@ def getXsec(sample):
   elif sample.find("WJetsToLNu_HT-70To100"                 ) !=-1 : return 1270.*1.21    ;
   elif sample.find("WJetsToLNu_HT-2500ToInf"               ) !=-1 : return 0.03089*1.21 ;
   elif sample.find( "WJetsToLNu_TuneCUETP8M1"              ) !=-1 : return 50380.0*1.22 ;
+  elif sample.find( "WJetsToLNuTuneCUETP8M1"              ) !=-1 : return 50380.0*1.22 ;
   elif sample.find( "W1JetsToLNu_TuneCUETP8M1"             ) !=-1 : return 9644.5*1.22 ;
   elif sample.find( "W2JetsToLNu_TuneCUETP8M1"             ) !=-1 : return 3144.5*1.22 ;
   elif sample.find( "W3JetsToLNu_TuneCUETP8M1"             ) !=-1 : return  954.8*1.22 ;
   elif sample.find( "W4JetsToLNu_TuneCUETP8M1"             ) !=-1 : return  485.6*1.22 ;
+  elif sample.find( "W1JetsToLNuTuneCUETP8M1"             ) !=-1 : return 9644.5*1.22 ;
+  elif sample.find( "W2JetsToLNuTuneCUETP8M1"             ) !=-1 : return 3144.5*1.22 ;
+  elif sample.find( "W3JetsToLNuTuneCUETP8M1"             ) !=-1 : return  954.8*1.22 ;
+  elif sample.find( "W4JetsToLNuTuneCUETP8M1"             ) !=-1 : return  485.6*1.22 ;
   elif sample.find("WW_Tune"                               ) !=-1 : return 118.7        ;
   elif sample.find("WZ_Tune"                               ) !=-1 : return 47.13        ;
   elif sample.find("ZZ_Tune"                               ) !=-1 : return 16.5         ;
@@ -46,8 +51,11 @@ def getXsec(sample):
   elif sample.find("ST_t-channel_antitop_4f_leptonDecays"  ) !=-1 : return 80.95*0.322  ;
   elif sample.find("ST_t-channel_antitop_4f_inclusiveDecays") !=-1 : return 136.02      ;
   elif sample.find("ST_t-channel_top_4f_inclusiveDecays"   ) !=-1 : return 80.95        ;
+ 
   elif sample.find("ST_tW_antitop_5f_inclusiveDecays"      ) !=-1 : return 35.6         ;
+  elif sample.find("STtWantitop5finclusiveDecays"      ) !=-1 : return 35.6         ;
   elif sample.find("ST_tW_top_5f_inclusiveDecays_"         ) !=-1 : return 35.6         ;
+  elif sample.find("STtWtop5finclusiveDecays"         ) !=-1 : return 35.6         ;
   elif sample.find("SingleMuon")!=-1  or sample.find("SingleElectron") !=-1 or sample.find("JetHT") !=-1 or sample.find("data") !=-1 : return 1.
   else:
 	  print "Cross section not defined for this sample!!"

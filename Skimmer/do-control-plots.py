@@ -7,6 +7,8 @@ from time import sleep
 
 # ROOT.gROOT.SetBatch(True)
 
+ttOnly = True
+
 CMS_lumi.lumi_13TeV = "41.4 fb^{-1}(2017)"
 CMS_lumi.writeExtraText = 1
 CMS_lumi.extraText = "Preliminary"
@@ -15,28 +17,30 @@ iPos = 11
 if( iPos==0 ): CMS_lumi.relPosX = 0.12
 iPeriod = 4 #iPeriod = 0 for simulation-only plots
 
-lumi = 41367.929231882
+lumi = 4767.0 #41367.929231882
 
-dir = "/scratch/thaarres/NANO_18apr/"
-cut = "(SelectedJet_tau21_ddt_retune<0.57)"
-cut = "(abs(dr_LepJet)>1.5708&&abs(dphi_MetJet)>2.&&abs(dphi_WJet)>2&&Wlep_type==0&&SelectedJet_tau21<0.40)"
+dir = "/uscms/home/aparker/nobackup/2018/Wtagging/CMSSW_9_4_2/src/WTopScalefactorProducer/Skimmer/crab/WtaggingSkim/" #"/scratch/thaarres/NANO_18apr/"
+cut = "(SelectedSubJet_tau21_ddt_retune<0.57)"
+cut = "(abs(dr_LepJet)>1.5708&&abs(dphi_MetJet)>2.&&abs(dphi_WJet)>2&&Wlep_type==0&&SelectedJet_tau32<0.70&&SelectedJet_softDrop_mass>60. )"
 cut = "1."
-vars = ["SelectedJet_softDrop_mass","FatJet_pt[0]","FatJet_eta[0]","FatJet_tau1[0]","FatJet_tau2[0]","FatJet_tau3[0]","FatJet_mass[0]","FatJet_msoftdrop[0]","MET_sumEt[0]"] #Pileup_nPU
+vars = ["SelectedSubJet_softDrop_mass","FatJet_pt[0]","FatJet_eta[0]","FatJet_tau1[0]","FatJet_tau2[0]","FatJet_tau3[0]","FatJet_mass[0]","FatJet_msoftdrop[0]","MET_sumEt[0]"] #Pileup_nPU
 
 #Data infile
-datas   = ["SingleMuon.root"]
+datas   = ["WtaggingSkim_singleMuon2017B.root"]  #["SingleMuon.root"]
 
 #MC infiles
 bkgs = []
+
 STs   = ["ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8.root","ST_t-channel_antitop_4f_inclusiveDecays_TuneCP5_13TeV-powhegV2-madspin-pythia8.root","ST_t-channel_top_4f_inclusiveDecays_TuneCP5_13TeV-powhegV2-madspin-pythia8.root","ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8.root","ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8.root"]
 STs   = ["ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8.root"]
-TTs   = ["TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8.root","TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8.root","TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8.root"]
+TTs   = ["WtaggingSkim-TTToSemiLeptonic.root"]#"TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8.root","TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8.root","TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8.root"]
 # TTs   = ["TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8.root"]
 WJs   = ["W1JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8.root","W2JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8.root","W3JetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8.root"]
 VVs   = ["WW_TuneCP5_13TeV-pythia8.root","WZ_TuneCP5_13TeV-pythia8.root","ZZ_TuneCP5_13TeV-pythia8.root"]
-bkgs.append(STs)
-bkgs.append(VVs)
-bkgs.append(WJs)
+if not ttOnly :
+    bkgs.append(STs)
+    bkgs.append(VVs)
+    bkgs.append(WJs)
 bkgs.append(TTs)
 
 #For drawing
