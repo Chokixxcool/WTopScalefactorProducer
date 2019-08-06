@@ -35,7 +35,9 @@ STs   = [ "WtaggingSkim_noEleTrigger_Sept10_94XMC-ST_t-channel_top_4f_inclusiveD
 
 #"ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8.root","ST_t-channel_antitop_4f_inclusiveDecays_TuneCP5_13TeV-powhegV2-madspin-pythia8.root","ST_t-channel_top_4f_inclusiveDecays_TuneCP5_13TeV-powhegV2-madspin-pythia8.root","ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8.root","ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8.root"]
 #STs   = ["ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8.root"]
-TTs   = ["WtaggingSkim-TTToSemiLeptonic.root"]#"TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8.root","TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8.root","TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8.root"]
+TTs   = ["WtaggingSkim_noEleTrigger_Sept10_94XMC-TTToSemiLeptonic__TuneCP5.root"]
+
+#"WtaggingSkim-TTToSemiLeptonic.root"]#"TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8.root","TTToHadronic_TuneCP5_PSweights_13TeV-powheg-pythia8.root","TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8.root"]
 # TTs   = ["TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8.root"]
 
 WJs   = ["WtaggingSkim_noEleTrigger_Sept10_94XMC-W1JetsToLNuTuneCUETP8M113TeV.root",

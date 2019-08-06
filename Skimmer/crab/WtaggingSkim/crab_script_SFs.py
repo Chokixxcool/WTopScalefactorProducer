@@ -42,12 +42,13 @@ inputFiless = [
 #'root://cmseos.fnal.gov//store/user/asparker/NanoAODJMARTools-skims/nanoskim-JetsAndLepton-94XMC-STtWtop5finclusiveDecaysTuneCP513TeV-powheg-pythia-trees.root'
 #'root://cmseos.fnal.gov//store/user/asparker/NanoAODJMARTools-skims/nanoskim-JetsandLepton-94XMC-TTToHadronic_TuneCP5_13TeV-powheg-pythia8-trees.root'
 #'./nanoskim-JetsandLepton-94XMC-ST_t-channel_top_4f_inclusiveDecays_TuneCP5-trees.root'
-'root://cmseos.fnal.gov//store/user/asparker/NanoAODJMARTools-skims/nanoskim-JetsandLepton-94XMC-TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8-trees.root'
+#'root://cmseos.fnal.gov//store/user/asparker/NanoAODJMARTools-skims/nanoskim-JetsandLepton-94XMC-TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8-trees.root'
+'root://cmseos.fnal.gov//store/user/asparker/NanoAODJMARTools-skims/nanoskim-JetsandLepton-94XMC-TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8-3of3-trees.root'
 #'./nanoskim-JetsandLepton-94XMC-QCD_Pt-15to7000_TuneCP5_Flat_13TeV_pythia8-trees.root'
 #'root://cmseos.fnal.gov//store/user/asparker/CRAB_UserFiles/nanoskim-JetsAndLepton-94XMC-TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8_RunIIFall17/180605_122319/0000/nanoskim-trees_99.root'
 ]
 
-n = '94XMC-TTToSemiLeptonic__TuneCP5'   #'SingleMuonandElectron_2017BtoF'#'94XMC-TTToHadronic_TuneCP5'  #'94XMC-TT-ToSemiLeptonic_TuneCP5'   #'94XMC-ST_t-channel_top_4f_inclusiveDecays_TuneCP5' #'94XMC-TTToHadronic_TuneCP5'#'94XMC-STtWtop5finclusiveDecaysTuneCP513TeV' #'94XMC-WJetsToLNuTuneCUETP8M113TeV'#'94XMC-QCD_Pt-15to7000_TuneCP5_Flat'#'94XMC-TTToSemiLeptonic_TuneCP5'
+n = '94XMC-TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8-3of3'  # '94XMC-TTToSemiLeptonic__TuneCP5'   #'SingleMuonandElectron_2017BtoF'#'94XMC-TTToHadronic_TuneCP5'  #'94XMC-TT-ToSemiLeptonic_TuneCP5'   #'94XMC-ST_t-channel_top_4f_inclusiveDecays_TuneCP5' #'94XMC-TTToHadronic_TuneCP5'#'94XMC-STtWtop5finclusiveDecaysTuneCP513TeV' #'94XMC-WJetsToLNuTuneCUETP8M113TeV'#'94XMC-QCD_Pt-15to7000_TuneCP5_Flat'#'94XMC-TTToSemiLeptonic_TuneCP5'
 
 
 
